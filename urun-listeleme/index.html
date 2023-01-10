@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>UPSI</h1>
+            <a href="olustur.html" target="_self" style="text-decoration: none; color: white;">Olustur</a>
+        </header>
+        
+        <h2>Liste</h2>
+        <hr>
+
+        <div class="section">
+            <!-- <div class="sec">
+                <h3>Baslik</h3>
+                <img src="image/b.png" width="130px">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, doloremque.</p>
+
+                <div class="actions">
+                    <button>begen</button>
+                    <button>yorum</button>
+                </div>
+            </div>     -->
+        </div>
+    </div>
+
+<script>
+
+    urunler = JSON.parse(localStorage.getItem('urunler'));
+
+    const section = document.querySelector('.section');
+
+    urunler.forEach((a) => {
+    const secDiv = document.createElement('div');
+    const h3 = document.createElement('h3');
+    const image = document.createElement('img');
+    const p = document.createElement('p');
+    const actions = document.createElement('div');
+    const likeDiv = document.createElement('div');
+    const comDiv = document.createElement('div');
+    const label =document.createElement('label')
+    const label2 =document.createElement('label')
+    const like = document.createElement('img');
+    const com = document.createElement('img');
+
+    secDiv.appendChild(h3);
+    secDiv.appendChild(image);
+    secDiv.appendChild(p);
+    secDiv.appendChild(actions);
+
+    actions.appendChild(likeDiv);
+    actions.appendChild(comDiv);
+
+    likeDiv.appendChild(like);
+    likeDiv.appendChild(label);
+    comDiv.appendChild(com)
+    comDiv.appendChild(label2)
+
+    secDiv.classList.add('sec');
+    actions.classList.add('actions')
+    image.classList.add('secImg');
+    like.classList.add('like');
+    com.classList.add('com');
+    comDiv.classList.add('comDiv')
+    likeDiv.classList.add('likeDiv')
+    
+
+    h3.innerHTML= a.baslik;
+    image.src = a.foto;
+    p.innerHTML = a.acikla;
+
+    like.src='image/c.png';
+    label.innerHTML = a.begeni ;
+
+    com.src ='image/d.png';
+    label2.innerHTML = a.yorum;
+
+    
+
+    section.appendChild(secDiv);
+
+    });
+
+</script>
+
+</body>
+</html>
+
+
+<!-- Kullanıcının girmesi gereken ürün bilgileri şu şekildedir;
+Başlık
+Açıklama
+Resim
+Beğeni sayısı
+Yorum sayısı
+Ödev, 2 sayfadan oluşmalıdır ve sayfalar arasında geçiş yapılabilmelidir.
+Ürünlerin listelendiği liste sayfası
+Ürünlerin oluşturulduğu oluştur sayfası
+Ürünler oluşturulduktan sonra local storage'a kaydedilmelidir.
+Local storage'a kaydedilen ürünler liste sayfasında listelenmelidir.
+Resim yükleme işlemleri base64 şeklinde ile yapılmalıdır(Google'a ingilizce sorularak ulaşılabilir). -->

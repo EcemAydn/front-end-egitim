@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   
+     <div class="container">
+
+        <header>
+            <h1>UPSI</h1>
+            <a href="index.html" target="_self" style="text-decoration: none; color: white;"> Listele </a>
+        </header>
+            <h2>Olustur</h2>
+            <hr>
+            
+        <div class="olustur">
+
+            <div class="sec2">
+                <div>
+                    <input type="text" class="baslik" placeholder="Baslik" >
+                </div>
+                <div>
+                    <input type="text" class="aciklama" placeholder="Aciklama" >
+                </div>
+                <div>
+                    <input type="file" class="foto" placeholder="Fotograf" onchange="imageUpload(event)" >
+                </div>
+                <div>
+                    <input type="number" class="begeni" placeholder="Begeni sayisi" >
+                </div>
+                <div>
+                    <input type="number" class="yorum" placeholder="Yorum sayisi" >
+                </div>
+                <button class="kaydetBtn" onclick="kaydetBtn()">Kaydet</button>
+            </div>
+    </div>
+</div> 
+
+<script src="script.js"></script>
+
+</body>
+</html>
