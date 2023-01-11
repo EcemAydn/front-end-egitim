@@ -57,20 +57,11 @@ html, body{
 	background-image: url(e.webp);
 	gap: 20px;
 }
-
 .hepsi{
 	background-color: rgb(224, 214, 198);
 	border-radius: 20px;
 	padding: 15px;
 }
-
-.olustur {
-	display: flex;
-    flex-direction: column;
-	align-items: center;
-	gap: 20px;
-}
-
 h1{
     font-size: 40px;
     font-weight: bold;
@@ -78,34 +69,34 @@ h1{
 	margin-bottom: 40px;
 	margin-top: 10px;
 }
-
+.olustur {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
 .inplb{
 	display: flex;
 	gap: 10px;
 }
-
 .label, .input {
 	display: flex;
 	flex-direction: column;
 }
-
-.input{
-	gap: 19px;
-}
-
-.input input {
-	background-color: rgb(200, 194, 185);
-	border-color:rgb(197, 185, 169);
-	color: white;
-}
-
 .label{
 	color: rgb(166, 158, 148);
 	gap: 20px;
 	font-size: 20px;
 	font-weight: bold;
 }
-
+.input{
+	gap: 19px;
+}
+.input input {
+	background-color: rgb(200, 194, 185);
+	border-color:rgb(197, 185, 169);
+	color: white;
+}
 .buttons input{
 	font-size: 15px;
 	border-radius: 20px;
@@ -135,27 +126,24 @@ h1{
 	background-color:rgb(216, 209, 200);
 	color:rgb(160, 136, 104) ;
 }
-.list{
-	display: flex;
-	background-color: rgb(224, 214, 198);
-	border-radius: 20px;
-	padding: 15px;
-}
 table {
 	font-family: arial, sans-serif;
 	border-collapse: collapse;
-	width: 100%;
+	width: 70%;
+	background-color:rgb(224, 214, 198);
+	border-radius: 10px;
   }
-  
-  td, th {
-	border: 1px solid #dddddd;
+td, th {
 	text-align: left;
-	padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-	background-color: #dddddd;
-  }
+	padding: 7px;
+}
+th{
+	font-weight: bold;
+	border-bottom: 1px solid;
+}
+tr:nth-child(even) {
+	background-color: rgb(235, 227, 214);
+}
 
 
 
