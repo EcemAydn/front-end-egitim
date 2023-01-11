@@ -88,9 +88,15 @@ h1{
     flex-direction: column;
     padding: 20px;
     width: 200px;
+    justify-content: space-between;
     gap: 10px;
     border-radius: 10px;
     box-shadow: rgba(166, 166, 173, 0.2) 0px 7px 29px 0px;
+}
+.deneme{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .sec2{
     width: 400px;
