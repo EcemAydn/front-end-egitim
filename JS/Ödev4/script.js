@@ -49,6 +49,7 @@ function btnSave(){
         class1.value = "";
         parent.value = "";
         localStorage.setItem('students', JSON.stringify(students));
+        btnShow();
 
     }
 
@@ -94,6 +95,8 @@ function btnDelete(){
     if(typeof bla === 'number'){
         students.splice(bla, 1);
         dene= alert('silindi');
+        localStorage.setItem('students', JSON.stringify(students));
+
     } else{
         dene= alert('bulunamadı');
         
