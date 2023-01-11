@@ -4,9 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ödev3</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="hepsi">
+        <h1>OGRENCI OLUSTUR</h1>
+
+        <div class="olustur">
+            <div class="inplb">
+            <div class="label">
+                <label>Name  : </label>
+                <label>Surname: </label>
+                <label>Number: </label>
+                <label>Age: </label>
+                <label>Class: </label>
+                <label>Parent Number: </label>
+            </div>
+            
+            <div class="input">
+
+                <input type="text" id="fname" >
+
+                <input type="text" id="surname" >
+
+                <input type="number" id="number" >
+
+                <input type="number" id="age" >
+
+                <input type="text" id="class1" >
+
+                <input type="number" id="parent" >
+            </div>
+        </div>
+
+            <div class="buttons">  
+                <input type="button" id="save" onclick="btnSave()" value="Save">
+                <input type="button" id="show" onclick="btnShow()" value="Show" >
+            </div>
+            <div class="sil">
+            <input type="text" id="numberDel">
+            <input type="button" id="delete" onclick="btnDelete()" value="Delete" >
+            </div>
+
+        </div>
+        
+    </div>
+   
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Number</th>
+                <th>Age</th>
+                <th>Class</th>
+                <th>Parent Number</th>
+            </tr>
+        </thead>
+        
+        <tbody class="liste">
+
+        </tbody>
+      </table>
+      
+      
+
+    <script src="script.js"></script>
 </body>
 </html>
