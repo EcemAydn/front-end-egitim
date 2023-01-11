@@ -41,61 +41,56 @@
     const section = document.querySelector('.section');
 
     urunler.forEach((a) => {
-    const secDiv = document.createElement('div');
+        const secDiv = document.createElement('div');
 
-    const deneme =document.createElement('div');
-    const h3 = document.createElement('h3');
-    const image = document.createElement('img');
-    const p = document.createElement('p');
+        const deneme =document.createElement('div');
+        const h3 = document.createElement('h3');
+        const image = document.createElement('img');
+        const p = document.createElement('p');
 
-    const actions = document.createElement('div');
-    const likeDiv = document.createElement('div');
-    const comDiv = document.createElement('div');
-    const label =document.createElement('label');
-    const label2 =document.createElement('label');
-    const like = document.createElement('img');
-    const com = document.createElement('img');
+        const actions = document.createElement('div');
+        const likeDiv = document.createElement('div');
+        const comDiv = document.createElement('div');
+        const label =document.createElement('label');
+        const label2 =document.createElement('label');
+        const like = document.createElement('img');
+        const com = document.createElement('img');
 
-    secDiv.appendChild(deneme);
-    deneme.appendChild(h3);
-    deneme.appendChild(image);
-    deneme.appendChild(p);
-    secDiv.appendChild(actions);
+        secDiv.appendChild(deneme);
+        deneme.appendChild(h3);
+        deneme.appendChild(image);
+        deneme.appendChild(p);
+        secDiv.appendChild(actions);
 
-    actions.appendChild(likeDiv);
-    actions.appendChild(comDiv);
+        actions.appendChild(likeDiv);
+        actions.appendChild(comDiv);
 
-    likeDiv.appendChild(like);
-    likeDiv.appendChild(label);
-    comDiv.appendChild(com);
-    comDiv.appendChild(label2);
+        likeDiv.appendChild(like);
+        likeDiv.appendChild(label);
+        comDiv.appendChild(com);
+        comDiv.appendChild(label2);
 
-    secDiv.classList.add('sec');
-    actions.classList.add('actions');
-    image.classList.add('secImg');
-    like.classList.add('like');
-    com.classList.add('com');
-    comDiv.classList.add('comDiv');
-    likeDiv.classList.add('likeDiv');
-    deneme.classList.add('deneme')
-    
+        secDiv.classList.add('sec');
+        actions.classList.add('actions');
+        image.classList.add('secImg');
+        like.classList.add('like');
+        com.classList.add('com');
+        comDiv.classList.add('comDiv');
+        likeDiv.classList.add('likeDiv');
+        deneme.classList.add('deneme');
 
-    h3.innerHTML= a.baslik;
-    image.src = a.foto;
-    p.innerHTML = a.acikla;
+        h3.innerHTML= a.baslik;
+        image.src = a.foto;
+        p.innerHTML = a.acikla;
 
-    like.src='image/c.png';
-    label.innerHTML = a.begeni ;
+        like.src='image/heart.svg';
+        label.innerHTML = a.begeni ;
 
-    com.src ='image/d.png';
-    label2.innerHTML = a.yorum;
+        com.src ='image/chat.svg';
+        label2.innerHTML = a.yorum;
 
-    
-
-    section.appendChild(secDiv);
-
+        section.appendChild(secDiv);
     });
-
 </script>
 
 </body>
