@@ -1,12 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ödev5</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
 </head>
 <body>
+  <div id="container">
+    <div class="cursor">fetocu mehmet</div>
+    <div class="calculator">
+    <header>
+      <div class="header-name">calc</div>   
+      <!-- <div class="header-name2">calc</div> 
+      <div class="header-name3">calc</div>    -->
+      <div class="header-theme">
+        <h3>THEME</h3>          
+        <div class="header-button">
+          <div class="num">
+            <div>
+              1
+            </div>
+            <div>
+              2
+            </div>
+            <div>
+              3
+            </div>
+          </div>
+          <div id="btn">
+            <button id="btn1" onclick="onButtonClick('btn1')"></button>
+            <button id="btn2" onclick="onButtonClick('btn2')"></button>
+            <button id="btn3" onclick="onButtonClick('btn3')"></button>  
+          </div>      
+        </div>
+      </div>
+    </header>
     
+      <input id="text" value="0" readonly type="text">
+    
+      <div class="buttons">
+        <div>
+          <button onclick="onNumberClick(7)">7</button>
+          <button onclick="onNumberClick(8)">8</button>
+          <button onclick="onNumberClick(9)">9</button>
+          <button onclick="onOperatorClick('delete')" style="color: white; background-color: hsl(185, 42%, 37%);">DEL</button>
+        </div>
+        <div>
+          <button onclick="onNumberClick(4)">4</button>
+          <button onclick="onNumberClick(5)">5</button>
+          <button onclick="onNumberClick(6)">6</button>
+          <button onclick="onOperatorClick('plus')">+</button>
+        </div>
+        <div>
+          <button onclick="onNumberClick(1)">1</button>
+          <button onclick="onNumberClick(2)">2</button>
+          <button onclick="onNumberClick(3)">3</button>
+          <button onclick="onOperatorClick('minus')">-</button>
+        </div>
+        <div>
+          <button onclick="onNumberClick('.')">.</button>
+          <button onclick="onNumberClick(0)">0</button>
+          <button onclick="onOperatorClick('divide')">/</button>
+          <button onclick="onOperatorClick('multiply')">x</button>
+        </div>
+        <div class="res-equal">
+          <button onclick="onOperatorClick('reset')" style="background-color: hsl(185, 42%, 37%);">RESET</button>
+          <button onclick="onOperatorClick('equal')" style="background:hsl(25, 98%, 40%)">=</button>
+        </div>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+<script type="text/javascript">
+
+  const cursor = document.querySelector(".cursor");
+  var timeout;
+
+  document.addEventListener("mousemove",(e) => {
+      let x= e.pageX;
+      let y= e.pageY;
+
+      cursor.style.top =y +'px';
+      cursor.style.left =x +'px';
+      cursor.style.display ='block';
+
+    function mouseStopped(){
+      cursor.style.display='none';
+    }
+    clearTimeout(timeout);
+    timeout=setTimeout(mouseStopped, 1000);
+  })
+</script>
 </body>
 </html>
+
+
+
+  
+  
