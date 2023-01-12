@@ -20,26 +20,24 @@ function onOperatorClick(oprtr){
             input.value=0
         }
     }if(oprtr == "reset"){
-        input.value = 0
-        rec=0
+        input.value = 0;
+        rec=0;
     }if (oprtr == "minus"){
-        rec = input.value
-        input.value = 0
-        operator = oprtr
-
+        rec = input.value;
+        input.value = 0;
+        operator = oprtr;
     }if (oprtr == "plus"){
-        rec = input.value
-        input.value = 0
-        operator = oprtr        
+        rec = input.value;
+        input.value = 0;
+        operator = oprtr;        
     }if (oprtr == "divide"){
-        rec = input.value
-        input.value = 0
-        operator = oprtr
-
+        rec = input.value;
+        input.value = 0;
+        operator = oprtr;
     }if (oprtr == "multiply"){
-        rec = input.value
-        input.value = 0
-        operator = oprtr
+        rec = input.value;
+        input.value = 0;
+        operator = oprtr;
 
     }if(oprtr == "equal"){
         switch(operator){
@@ -60,37 +58,38 @@ function onOperatorClick(oprtr){
     }
 
 }
-function onButtonClick(bg1){
-    if (bg1=="btn1"){
-    
-        document.getElementById("container").style.backgroundColor= ""
-        document.getElementsByClassName("header-name")[0].style.color="white"
-        document.getElementById("text").style.backgroundColor = ""
-        document.getElementsByClassName("buttons")[0].style.backgroundColor = ""
-        document.getElementsByClassName("header-theme")[0].style.color=""
-        document.getElementById("btn1").style.backgroundColor="orange"
-        document.getElementById("btn2").style.backgroundColor="white"
-        document.getElementById("btn3").style.backgroundColor="white"
+let btn1 = document.querySelector('#btn1')
+let btn2 = document.querySelector('#btn2')
+let btn3 = document.querySelector('#btn3')
+let theme1 = document.querySelector('.theme');
+btn1.style.backgroundColor = 'orange'
 
-    } else if (bg1=="btn2"){
-        document.getElementById("container").style.backgroundColor="hsl(0, 0%, 90%)"
-        document.getElementsByClassName("header-name")[0].style.color="black"
-        document.getElementById("text").style.backgroundColor = "hsl(0, 5%, 81%)"
-        document.getElementsByClassName("buttons")[0].style.backgroundColor = "hsl(0, 5%, 81%)"
-        document.getElementsByClassName("header-theme")[0].style.color="black"
-        document.getElementById("btn2").style.backgroundColor="orange"
-        document.getElementById("btn1").style.backgroundColor="white"
-        document.getElementById("btn3").style.backgroundColor="white"
 
-    } else if (bg1=="btn3"){
-        document.getElementById("container").style.backgroundColor="hsl(268, 75%, 9%)"
-        document.getElementsByClassName("header-name")[0].style.color="yellow"
-        document.getElementById("text").style.backgroundColor = "hsl(268, 71%, 12%)"
-        document.getElementsByClassName("buttons")[0].style.backgroundColor = "hsl(268, 71%, 12%)"
-        document.getElementsByClassName("header-theme")[0].style.color="yellow"
-        document.getElementById("btn1").style.backgroundColor="white"
-        document.getElementById("btn2").style.backgroundColor="white"
-        document.getElementById("btn3").style.backgroundColor="aqua"
+function onButtonClick(theme){
 
+    if(theme == 'theme1') {
+
+        btn1.style.backgroundColor = 'orange'
+        btn2.style.backgroundColor = 'rgb(221, 216, 216)'
+        btn3.style.backgroundColor = 'rgb(221, 216, 216)'
+        theme1.classList.remove('theme2')
+        theme1.classList.remove('theme3')
+
+
+    } else if(theme == 'theme2') {
+
+        theme1.classList.add('theme2');
+        theme1.classList.remove('theme3')
+        btn1.style.backgroundColor = 'rgb(221, 216, 216)'
+        btn2.style.backgroundColor = 'orange'
+        btn3.style.backgroundColor = 'rgb(221, 216, 216)'
+
+    } else if(theme == 'theme3') {
+        theme1.classList.add('theme3');
+        btn1.style.backgroundColor = 'rgb(221, 216, 216)'
+        btn2.style.backgroundColor = 'rgb(221, 216, 216)'
+        btn3.style.backgroundColor = 'orange'
     }
+
+
 }
