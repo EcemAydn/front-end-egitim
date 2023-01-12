@@ -16,8 +16,7 @@
   </style>
 </head>
 <body>
-  <div id="container">
-    <div class="cursor">fetocu mehmet</div>
+  <div class="theme">
     <div class="calculator">
     <header>
       <div class="header-name">calc</div>   
@@ -38,15 +37,15 @@
             </div>
           </div>
           <div id="btn">
-            <button id="btn1" onclick="onButtonClick('btn1')"></button>
-            <button id="btn2" onclick="onButtonClick('btn2')"></button>
-            <button id="btn3" onclick="onButtonClick('btn3')"></button>  
+            <button id="btn1" onclick="onButtonClick('theme1')"></button>
+            <button id="btn2" onclick="onButtonClick('theme2')"></button>
+            <button id="btn3" onclick="onButtonClick('theme3')"></button>  
           </div>      
         </div>
       </div>
     </header>
     
-      <input id="text" value="0" readonly type="text">
+      <input id="text" value="0" readonly type="number">
     
       <div class="buttons">
         <div>
@@ -81,26 +80,7 @@
   </div>
 </div>
 <script src="script.js"></script>
-<script type="text/javascript">
 
-  const cursor = document.querySelector(".cursor");
-  var timeout;
-
-  document.addEventListener("mousemove",(e) => {
-      let x= e.pageX;
-      let y= e.pageY;
-
-      cursor.style.top =y +'px';
-      cursor.style.left =x +'px';
-      cursor.style.display ='block';
-
-    function mouseStopped(){
-      cursor.style.display='none';
-    }
-    clearTimeout(timeout);
-    timeout=setTimeout(mouseStopped, 1000);
-  })
-</script>
 </body>
 </html>
 
