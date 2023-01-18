@@ -58,5 +58,7 @@ Bu ödevde sizden Fetch kullanarak api ile haberleşip ekranda göstermeniz bekl
 
 ## Postun gereklilikleri
 
-- İçeriğini sizler dolduracaksınız
-
+- body
+- id 
+- title
+- userId
